@@ -1,8 +1,11 @@
 name: "Pranala"
-description: "Standard Jekyll Bootstrap Theme"
+description: "Site description here"
 author: Sindhu Kurnia
 url: "http://prana.la"
 timezone: Asia/Jakarta
+markdown: rdiscount
+highlighter: pygments
+
 # Don't parse this to _site
 exclude: ['Rakefile', 'Gemfile.lock', 'Gemfile', README.md, LICENSE]
 
@@ -12,13 +15,8 @@ permalink: /:year/:month/:day/:title/
 # Pagination number of articles per page
 paginate: 5
 
-# Merged category_dir parameter with category_archive path key.
-# category_dir: categories
-category_archive: 
-     path: /categories
-markdown: rdiscount
-
-highlighter: pygments
+# Parameters required by generate_categories.rb plugin
+category_dir: categories
 
 # Disqus setting
 disqus_shortname : pranala

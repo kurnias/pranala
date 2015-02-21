@@ -3,9 +3,9 @@
 <span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   {% if post %}
-    <span class="label label-success">{{ post.categories | category_links }}</span>
+    {{ post.categories | category_links }}    
   {% else %}
-    <span class="label label-success">{{ page.categories | category_links }}</span>
+    {{ page.categories | category_links }}
   {% endif %}
 </span>
 {% endunless %}
