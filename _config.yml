@@ -1,0 +1,25 @@
+name: "Pranala"
+description: "Standard Jekyll Bootstrap Theme"
+author: Sindhu Kurnia
+url: "http://prana.la"
+timezone: Asia/Jakarta
+# Don't parse this to _site
+exclude: ['Rakefile', 'Gemfile.lock', 'Gemfile', README.md, LICENSE]
+
+# Permalinks format
+permalink: /:year/:month/:day/:title/
+
+# Pagination number of articles per page
+paginate: 2
+
+# Merged category_dir parameter with category_archive path key.
+# category_dir: categories
+category_archive: 
+     path: /categories
+markdown: rdiscount
+
+highlighter: pygments
+
+# Disqus setting
+disqus_shortname : pranala
+
