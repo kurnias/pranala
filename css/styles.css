@@ -22,7 +22,7 @@ h2 {
  margin-bottom: 15px;
  padding-bottom: 0;
 }
-
+/* HTML5 compliance <br> replacement */ 
 p.clear {
 	clear:both
 }
