@@ -1,3 +1,4 @@
+# first line must not contain any rules
 *~
 *.save
 *.lock
