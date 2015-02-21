@@ -1,4 +1,7 @@
 # first line must not contain any rules
+BingSiteAuth.xml
+*.ico
+*.png
 *~
 *.save
 *.lock
