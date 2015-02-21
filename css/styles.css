@@ -23,4 +23,6 @@ h2 {
  padding-bottom: 0;
 }
 
-
+p.clear {
+	clear:both
+}
