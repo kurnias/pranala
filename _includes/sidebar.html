@@ -1,0 +1,35 @@
+<!-- Recent Post Sidebar -->
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  <div class="list-group">
+  {% for post in site.posts limit: 5 %}
+    <!-- make list-group-item active on selected single post -->	
+    <a href="{{ post.url }}" class="list-group-item {% if post.url == page.url %}active{% endif %}">{{ post.title }}</a>
+  {% endfor %}
+  </div>
+</section>
+<!-- End Recent Post Sidebar -->
+
+
+<!-- Categories Sidebar 
+Taken from http://kaworu.github.io/octostrap3/blog/2013/10/03/category-list-aside/
+-->
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Categories</h3>
+  </div>
+  <div class="list-group">
+    {% for category in site.categories %}
+    {% capture category_url %}{{ site.url }}{{ site.category_archive.path }}/{{ category | first | slugize | downcase | replace:' ','-' | append:'/index.html'}}{% endcapture %}
+    <a class="list-group-item {% if category_url == page.url %}active{% endif %}" href="{{ root_url | append:category_url }}">
+        <span class="badge">{{ category | last | size }}</span>
+        {{ category | first }}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- End Categories Sidebar -->
+
