@@ -1,0 +1,6 @@
+*~
+*.save
+*.lock
+_site/**/*
+_posts/**/*
+
