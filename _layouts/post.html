@@ -13,6 +13,13 @@
           {% include sidebar.html %}
     </div>
   </div>
+<div class="col-md-9">
+        <p class="meta text-muted">
+          {% include post-meta/author.html %} |
+          {% include post-meta/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %} | 
+          {% include post-meta/categories.html %}
+        </p>
+</div>
     <div class="col-md-9">
   	{% include disqus.html %}
     </div>
