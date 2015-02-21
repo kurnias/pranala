@@ -4,4 +4,4 @@
 *.lock
 _site/**/*
 _posts/**/*
-_images/**/*
+_images/*
