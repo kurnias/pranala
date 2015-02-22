@@ -1,7 +1,8 @@
-name: "Pranala"
-description: ""
+name: Pranala
+subtitle: ""
+description: "kurnia's 1001 ways to void your warranty"
 author: Sindhu Kurnia
-url: "http://prana.la"
+url: http://prana.la
 timezone: Asia/Jakarta
 markdown: rdiscount
 highlighter: pygments

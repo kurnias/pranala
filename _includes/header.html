@@ -5,10 +5,30 @@
     <title>{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
     <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="all">
     <link rel="shortcut icon" href='favicon.ico'>
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+<!-- OpenGraph Meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@prnla">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:description" content="{{ site.description }}">
+
+<!-- End of OpenGraph Meta tags -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+<!-- Our theme CSS -->
+     <link href="/css/styles.css" rel="stylesheet">
+
 <!-- not-required anymore on Bootstrap 3
     <link href="/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
