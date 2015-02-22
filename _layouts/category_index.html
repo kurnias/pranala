@@ -11,10 +11,13 @@ layout: default
   		{% assign year = this_year %}
   		<h2 class="year">{{ year }}</h2>
 		{% endunless %}
-    	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    	<p class="meta text-muted">
-  	{% include post-meta/date.html %}{{ time }} | 
-  	{% include post-meta/categories.html %}
-    </p>
+
+        <div class="category-id">
+	    	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+	  	{% include post-meta/date.html %}{{ time }} | 
+	  	{% include post-meta/categories.html %}
+		<p>&nbsp;</p>
+	</div>
+
 {% endfor %}
 </ul>

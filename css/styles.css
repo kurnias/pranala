@@ -22,7 +22,12 @@ h2 {
  margin-bottom: 15px;
  padding-bottom: 0;
 }
+
+.category-id h3 { padding: 0px; margin: 0px;}
+
 /* HTML5 compliance <br> replacement */ 
 p.clear {
 	clear:both
 }
+
+
