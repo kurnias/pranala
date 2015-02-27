@@ -3,24 +3,26 @@
 
   <div class="row">
     <div class="col-md-9">
+<!-- The Post Header -->
 	<div class="page-header">
     	  <span class="glyphicon glyphicon-calendar"></span>{{ page.date | date_to_long_string }}
 	  <h1 class="">{{ page.title }}</h1>
-	</div>
-  	  {{ content }}
-    </div>
-    <div class="col-md-3">
-          {% include sidebar.html %}
-    </div>
-  </div>
-<div class="col-md-9">
+	</div><!-- end page-header --> 
+<!-- The Content -->
+	{{ content }}
+<!-- Post meta section -->
         <p class="meta text-muted">
           {% include post-meta/author.html %} |
           {% include post-meta/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %} | 
           {% include post-meta/categories.html %}
         </p>
-</div>
-    <div class="col-md-9">
+<!-- Comments section -->
   	{% include disqus.html %}
-    </div>
-  {% include footer.html %}
+    </div> <!-- end col-md-9 -->
+    <div class="col-md-3">
+        {% include sidebar.html %}
+    </div><!-- end col-md-3 -->
+  </div><!-- end row -->
+<!-- Footer section -->
+	{% include footer.html %}
+
