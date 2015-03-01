@@ -5,7 +5,7 @@ keywords: tutorial, openwrt,linux, ham radio, jekyll, github
 author: Sindhu Kurnia
 url: http://prana.la
 timezone: Asia/Jakarta
-markdown: rdiscount
+markdown: kramdown
 highlighter: pygments
 
 # Don't parse this to _site
