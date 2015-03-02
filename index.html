@@ -8,7 +8,8 @@ title: Blog
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <span class="glyphicon glyphicon-calendar"></span><span class="date">{{ post.date | date_to_long_string }}</span>
+<!--  <span class="glyphicon glyphicon-calendar"></span> <span class="date">{{ post.date | date_to_long_string }}</span>-->
+  <span class="glyphicon glyphicon-calendar"></span> {% include post-meta/date.html %}{{ post.date | date_to_long_string }}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <div class="content">
     {{ post.content }}
