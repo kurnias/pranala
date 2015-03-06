@@ -23,3 +23,6 @@ category_dir: categories
 # Disqus setting
 disqus_shortname : pranala
 
+# Google analytics setting
+google_analytics : UA-37808923-4
+
