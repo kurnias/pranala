@@ -2,10 +2,12 @@
 layout: default
 title: Blog
 ---
-<div class="page-header"><h1 class="">{{page.title}}</h1></div>
+<!-- page header -->
+<div class="page-header"><h1 class="clear">{{page.title}}</h1></div>
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
+<!-- post-meta -->
   <span class="glyphicon glyphicon-calendar"></span> {% include post-meta/date.html %}{{ post.date | date_to_long_string }}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <div class="content">
@@ -13,7 +15,7 @@ title: Blog
 	<p class="clear">&nbsp;</p>
   </div>
 {% endfor %}
-
+<!-- End loops -->
 
 <!-- Pagination -->
 <nav>
