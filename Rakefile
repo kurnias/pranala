@@ -23,7 +23,7 @@ end
 
 desc "clean"
 task :clean do
-  puts "## Sanitize build directory ..."
+  puts "## Clean up build directory ..."
   rm_rf '_site'
   FileList['**/*~'].clear_exclude.each do |f|
     rm_f f
