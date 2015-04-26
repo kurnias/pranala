@@ -30,4 +30,15 @@ p.clear {
 	clear:both
 }
 
+.panel-default > .panel-heading-custom {
+background: #694489; 
+color: #fff;
+border-color: #694489; 
+}
+
+.panel-body {
+background:#5e2d79;
+color: #fff;
+border-color: #5e2d79; 
+}
 
