@@ -30,6 +30,18 @@ p.clear {
 	clear:both
 }
 
+/* Bootstrap custom */
+
+.brand {
+float: left;
+font: 800 normal 18px/1.2em 'Open Sans', sans-serif;
+text-transform: uppercase;
+color: white;
+}
+.brand a { color: white; }
+.brand a:hover { color: white; }
+
+
 .panel-default > .panel-heading-custom {
 background: #694489; 
 color: #fff;
@@ -41,4 +53,5 @@ background:#5e2d79;
 color: #fff;
 border-color: #5e2d79; 
 }
+
 

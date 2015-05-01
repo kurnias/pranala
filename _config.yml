@@ -1,6 +1,6 @@
 name: Pranala
 subtitle: "The random ramblings of a self-learner"
-description: "The random ramblings of a self-learner"
+description: "Pranala is the home site of Sindhu Kurnia, casual programmer, tinkerer and math teacher."
 keywords: tutorial, openwrt,linux, ham radio, jekyll, github
 author: Sindhu Kurnia
 url: http://prana.la
@@ -15,7 +15,7 @@ exclude: ['Rakefile', 'Gemfile.lock', 'Gemfile', README.md, LICENSE]
 permalink: /:year/:month/:day/:title/
 
 # Pagination number of articles per page
-paginate: 5
+paginate: 8
 
 # Parameters required by generate_categories.rb plugin
 category_dir: categories
