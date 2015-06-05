@@ -1,12 +1,13 @@
 name: Pranala
 subtitle: "The random ramblings of a self-learner"
-description: "Pranala is the home site of Sindhu Kurnia, casual programmer, tinkerer and math teacher."
+description: "Pranala is the home site of Sindhu Kurnia, tinkerer wannabe, casual coder and math lover."
 keywords: tutorial, openwrt,linux, ham radio, jekyll, github
 author: Sindhu Kurnia
 url: http://prana.la
 timezone: Asia/Jakarta
 markdown: kramdown
 highlighter: pygments
+excerpt_separator: "<!-- more -->"
 
 # Don't parse this to _site
 exclude: ['Rakefile', 'Gemfile.lock', 'Gemfile', README.md, LICENSE]
