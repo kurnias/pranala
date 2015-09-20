@@ -27,3 +27,13 @@ disqus_shortname : prnla
 # Google analytics setting
 google_analytics : UA-37808923-4
 
+# Glynn parameters
+ftp_host: ftp.prana.la
+ftp_dir: ~/domain/prana.la/prana.la/web/
+ftp_passive: false
+
+# optional
+# ftp_port: 22                  	       # default 21
+ftp_username: u10187ams@prana.la     # default read from stdin
+ftp_password: F2exJEd96h5s        # default read from stdin
+ftp_secure: true              	       # default false

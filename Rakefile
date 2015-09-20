@@ -38,7 +38,7 @@ site_dir       = "_site"
 desc "Deploy website via rsync"
 task :rsync do
   puts "## Deploying website via Rsync please standby..".bold.brown
-  system("rsync -avze 'ssh -p #{ssh_port}' #{rsync_args} #{"--delete" unless rsync_delete == false} #{site_dir}/ #{ssh_user}:#{document_root}")
+  system("rsync -avz --chmod=u=rwX,go=rX -e 'ssh -p #{ssh_port}' #{rsync_args} #{"--delete" unless rsync_delete == false} #{site_dir}/ #{ssh_user}:#{document_root}")
 end
 
 desc "clean"
