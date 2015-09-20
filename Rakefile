@@ -35,7 +35,7 @@ deploy_default = "rsync"
 # Misc.
 site_dir       = "_site"
 
-desc "Deploy website via rsync"
+desc "Deploy website via rsync portability fixed"
 task :rsync do
   puts "## Deploying website via Rsync please standby..".bold.brown
   system("rsync -avz --chmod=u=rwX,go=rX -e 'ssh -p #{ssh_port}' #{rsync_args} #{"--delete" unless rsync_delete == false} #{site_dir}/ #{ssh_user}:#{document_root}")
