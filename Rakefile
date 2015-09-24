@@ -25,9 +25,9 @@ end
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 # or you have to enter your password every deployment.
 #
-ssh_user       = "u10187ams@prana.la"
+ssh_user       = "username"
 ssh_port       = "22"
-document_root  = "~/domain/prana.la/prana.la/web/"
+document_root  = "~/domain/web/"
 rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
