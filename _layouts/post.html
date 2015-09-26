@@ -17,7 +17,9 @@
           {% include post-meta/categories.html %}
         </p>
 <!-- Comments section -->
-  	{% include disqus.html %}
+  {% if page.comments == "true" %}
+    {% include disqus.html %}
+  {% endif %}
     </div> <!-- end col-md-9 -->
     <div class="col-md-3">
         {% include sidebar.html %}
