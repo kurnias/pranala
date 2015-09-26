@@ -1,4 +1,4 @@
-## pranala - yet another vanilla Jekyll and Bootstrap Static Web
+### pranala - yet another vanilla Jekyll and Bootstrap Static Web
 
 This is my self-learning project on how to create Jekyll based website with Bootstrap 3.3.2 from scratch inspired by kAworu's [Octostrap3](https://github.com/kAworu/octostrap3) the theme that I'm using on my Octopress based personal website http://prana.la. 
 
