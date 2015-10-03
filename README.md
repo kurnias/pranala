@@ -14,7 +14,8 @@ Quick install
 
 Features
 =============
-=======
+- [x] Nothing special but standard Jekyll based static blog features.
+
 Pranala
 ===========
 
