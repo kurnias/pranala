@@ -3,7 +3,11 @@ name: Pranala
 subtitle: "The random ramblings of a self-learner"
 description: "Pranala is the home site of Sindhu Kurnia, tinkerer wannabe, casual coder and math lover."
 keywords: tutorial, openwrt,linux, ham radio, jekyll, github
-author: Sindhu Kurnia
+og:
+   image: default.png
+author: 
+   name: Sindhu Kurnia
+   fbid: https://www.facebook.com/sindhu.kurnia
 url: http://prana.la
 timezone: Asia/Jakarta
 markdown: kramdown
@@ -28,3 +32,7 @@ disqus_shortname : prnla
 # Google analytics setting
 google_analytics : UA-37808923-4
 
+#Social Media Sharing Option
+facebook_like: true
+twitter_tweet_button: false
+google_plus_one: false

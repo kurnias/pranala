@@ -72,6 +72,8 @@ task :post do
      date: #{DateTime.now.strftime('%Y-%m-%d %H:%M:%S %z')} 
      comments: true
      categories:
+     og:
+        image: ""
      sitemap:
        lastmod: 
        changefreq: weekly

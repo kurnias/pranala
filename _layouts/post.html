@@ -15,6 +15,7 @@
           {% include post-meta/author.html %} |
           {% include post-meta/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %} | 
           {% include post-meta/categories.html %}
+          {% include post-meta/sharing.html %}
         </p>
 <!-- Comments section -->
     {% include disqus.html %}
