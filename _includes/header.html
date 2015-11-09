@@ -3,8 +3,23 @@
 <html prefix="og: http://ogp.me/ns#">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description }}">
+        <meta name="keywords" content="{{ site.keywords }}">
+        <meta name="robots" content="all">
+        <link rel="shortcut icon" href='favicon.ico'>
+<!-- Twitter Card -->
+      
     {% if page.layout == 'post' %}
         <title>{{ site.name }} &middot; {{page.title}}</title>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@prnla">
+        <meta name="twitter:creator" content="@yd0piw">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 20 }}">
+        <meta name="twitter:image" content="{{ site.url }}/images/{{ page.og.image }}">
+      
         <meta property="fb:app_id" content="326012977514517" /> 
         <meta property="og:type"   content="article" />
         <meta property="article:author"   content="{{ site.author.fbid }}" />      
@@ -16,13 +31,9 @@
         <title>{{ site.name }} &middot; {{site.subtitle}}</title>
         <meta property="og:type"  content="website" />
         <meta property="og:url"    content="{{ site.url }}" />       
-        <meta property="og:image"  content="{{ site.url }}/images/{{ site.og.image }}" />   
+        <meta property="og:image"  content="{{ site.url }}/images/{{ site.og.image }}" />
+        <meta property="og:description"  content="{{ site.description }}" />        
     {% endif %}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{ site.description }}">
-        <meta name="keywords" content="{{ site.keywords }}">
-        <meta name="robots" content="all">
-        <link rel="shortcut icon" href='favicon.ico'>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- Latest compiled and minified CSS -->

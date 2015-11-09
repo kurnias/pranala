@@ -4,7 +4,7 @@ subtitle: "The random ramblings of a self-learner"
 description: "Pranala is the home site of Sindhu Kurnia, tinkerer wannabe, casual coder and math lover."
 keywords: tutorial, openwrt,linux, ham radio, jekyll, github
 og:
-   image: default.png
+   image: github.png
 author: 
    name: Sindhu Kurnia
    fbid: https://www.facebook.com/sindhu.kurnia
