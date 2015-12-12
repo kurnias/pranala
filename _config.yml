@@ -1,6 +1,6 @@
 # config.yml for pranala
 name: Pranala
-subtitle: "The random ramblings of a self-learner"
+subtitle: "My personal ramblings and half-truth"
 description: "Pranala is the home site of Sindhu Kurnia, tinkerer wannabe, casual coder and math lover."
 keywords: tutorial, openwrt,linux, ham radio, jekyll, github
 og:
@@ -32,7 +32,10 @@ disqus_shortname : prnla
 # Google analytics setting
 google_analytics : UA-37808923-4
 
+#Facebook Apps ID
+fb_appsid : 326012977514517
+
 #Social Media Sharing Option
 facebook_like: true
-twitter_tweet_button: false
+twitter_tweet_button: true
 google_plus_one: false
