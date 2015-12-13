@@ -38,4 +38,4 @@ fb_appsid : 326012977514517
 #Social Media Sharing Option
 facebook_like: true
 twitter_tweet_button: true
-google_plus_one: false
+google_plus_one: true

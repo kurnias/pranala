@@ -48,10 +48,20 @@ color: #fff;
 border-color: #694489; 
 }
 
+.fb-like{display:inline-block;vertical-align:top;}
+.twitter-share-button{display:inline-block;vertical-align:top;}
+.g-plusone{display:inline-block;vertical-align:top;}
+
 .panel-body {
-background:#5e2d79;
-color: #fff;
-border-color: #5e2d79; 
+    background:#5e2d79;
+    color: #fff;
+    border-color: #5e2d79; 
 }
 
+.fbblue {
+    color: #3b5998;
+}
 
+.twitterblue{
+    color: #4099ff;
+}
