@@ -1,15 +1,16 @@
 <div class="sharing"> 
+    
+{% capture permalinks %}{{ site.url }}{{ page.url }}{% endcapture %}
+    
+{% if site.twitter_tweet_button %}
+    <a href="http://twitter.com/share" data-url="{{ permalinks | bitly }}" class="twitter-share-button" data-via="prnla"></a>
+{% endif %}
 
 {% if site.facebook_like %}
     <div class="fb-like" data-href="{{site.url}}{{page.url}}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 {% endif %}
-    
-{% if site.twitter_tweet_button %}
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="prnla"></a>
-{% endif %}
-    
+
 {% if site.google_plus_one %}
     <div class="g-plusone" data-annotation="bubble" data-href="{{site.url}}{{page.url}}" data-size="medium" data-width="120"></div>
 {% endif %}
-
 </div>
