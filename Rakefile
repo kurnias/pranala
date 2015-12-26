@@ -48,9 +48,15 @@ task :clean do
   end
 end
 
+desc "delete root index.html"
+task :unindex do
+    rm_f '_site/index.html'
+end
+
+
 desc "build the site"
 task :build do
-  sh "bundle exec jekyll build"
+  sh "bundle exec jekyll build --incremental"
 end
 
 desc 'create a new draft post'
@@ -129,7 +135,9 @@ task :notify => [:pingomatic, :sitemapgoogle, :sitemapbing] do
 end
 
 desc 'Rake the world'
-task :all => [:clean, :build, :rsync, :notify] do
+task :world => [:clean, :build, :rsync, :notify] do
 end
 
-
+desc 'Rake build incremental'
+task :all =>[:unindex, :build, :rsync, :notify] do
+end
