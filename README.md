@@ -15,4 +15,4 @@ Quick install
 Features
 =============
 - [x] Nothing special but standard Jekyll based static blog features.
-
+- [x] Support Jekyll 3.0
