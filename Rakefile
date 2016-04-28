@@ -51,6 +51,8 @@ end
 desc "delete root index.html"
 task :unindex do
     rm_f '_site/index.html'
+    rm_f '_site/atom.xml'
+    rm_f '_site/sitemap.xml'
 end
 
 
