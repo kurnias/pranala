@@ -1,4 +1,8 @@
 require 'time'
+require 'rake'
+require 'yaml'
+require 'fileutils'
+require 'rbconfig'
 
 class String
 def black;          "\033[30m#{self}\033[0m" end
@@ -21,6 +25,24 @@ def bold;           "\033[1m#{self}\033[22m" end
 def reverse_color;  "\033[7m#{self}\033[27m" end
 end
 
+# == Configuration =============================================================
+
+# Set "rake watch" as default task
+task :default => :help
+
+# Load the configuration file
+CONFIG = YAML.load_file("_config.yml")
+
+# Get and parse the date
+DATE = Time.now.strftime("%Y-%m-%d")
+TIME = Time.now.strftime("%H:%M:%S")
+POST_TIME = DATE + ' ' + TIME
+
+# Directories
+POSTS = "_posts"
+DRAFTS = "_drafts"
+SITES = "_site"
+
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 # or you have to enter your password every deployment.
@@ -32,15 +54,69 @@ rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
-# Misc.
-site_dir       = "_site"
+## -- Helper Functions -- ##
+
+# Execute a system command
+def execute(command)
+  system "#{command}"
+end
+
+# Check the title
+def check_title(title)
+  if title.nil? or title.empty?
+    raise "Please add a title to your file."
+  end
+end
+
+# Transform the filename and date to a slug
+def transform_to_slug(title, extension)
+  characters = /("|'|!|\?|:|\s\z)/
+  whitespace = /\s/
+  "#{title.gsub(characters,"").gsub(whitespace,"-").downcase}.#{extension}"
+end
+
+# Read the template file
+def read_file(template)
+  File.read(template)
+end
+
+# Save the file with the title in the YAML front matter
+def write_file(content, title, directory, filename)
+  parsed_content = "#{content.sub("title:", "title: \"#{title}\"")}"
+  parsed_content = "#{parsed_content.sub("date:", "date: #{POST_TIME}")}"
+  File.write("#{directory}/#{filename}", parsed_content)
+  puts "#{filename} was created in '#{directory}'."
+end
+
+# Create the file with the slug and open the default editor
+def create_file(directory, filename, content, title, editor)
+  FileUtils.mkdir(directory) unless File.exists?(directory)
+  if File.exists?("#{directory}/#{filename}")
+    raise "The file already exists."
+  else
+    write_file(content, title, directory, filename)
+    if editor && !editor.nil?
+      sleep 1
+      execute("#{editor} #{directory}/#{filename}")
+    end
+  end
+end
+
+desc "Helper"
+task :help do
+  puts 'rake write["title"] to create new post'
+  puts 'rake clean'
+  puts 'rake build'
+  puts 'rake deploy'
+  puts 'rake all'
+end
 
 desc "Deploy website via rsync portability fixed"
 task :rsync do
-  system("rsync -avz --chmod=u=rwX,go=rX -e 'ssh -p #{ssh_port}' #{rsync_args} #{"--delete" unless rsync_delete == false} #{site_dir}/ #{ssh_user}:#{document_root}")
+  system("rsync -avz --chmod=u=rwX,go=rX -e 'ssh -p #{ssh_port}' #{rsync_args} #{"--delete" unless rsync_delete == false} #{SITES}/ #{ssh_user}:#{document_root}")
 end
 
-desc "clean"
+desc "Clean"
 task :clean do
   rm_rf '_site'
   FileList['**/*~'].clear_exclude.each do |f|
@@ -62,36 +138,14 @@ task :build do
 end
 
 desc 'create a new draft post'
-task :post do
-    title = ENV['TITLE']
-    slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
-
-    file = File.join(
-        File.dirname(__FILE__),
-        '_posts',
-        slug + '.md'
-    )
-
-    File.open(file, "w") do |f|
-        f << <<-EOS.gsub(/^     /, '')
-     ---
-     layout: post
-     title: #{title}
-     date: #{DateTime.now.strftime('%Y-%m-%d %H:%M:%S %z')} 
-     comments: true
-     categories:
-     og:
-        image: ""
-     sitemap:
-       lastmod: 
-       changefreq: weekly
-       priority: 0.7
-     ---
-
-        EOS
-    end
-
-    system ("#{ENV['EDITOR']} #{file}")
+task :write, :title do |t, args|
+  title = args[:title]
+  template = CONFIG["post"]["template"]
+  editor = CONFIG["editor"]
+  check_title(title)
+  filename = "#{DATE}-#{transform_to_slug(title, 'md')}"
+  content = read_file(template)
+  create_file(POSTS, filename, content, title, editor)
 end
 
 #

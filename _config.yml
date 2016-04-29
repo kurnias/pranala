@@ -14,6 +14,10 @@ markdown: kramdown
 highlighter: pygments
 excerpt_separator: "<!-- more -->"
 
+post:
+    template: _post.tpl
+    editor: nano
+
 gems: [jekyll-paginate, jekyll-gist]
 
 # Don't parse this to _site
