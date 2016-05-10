@@ -2,7 +2,7 @@
 layout: post
 title: 
 date:  
-comments: 
+comments: true
 categories: 
 og:
    image: ""
