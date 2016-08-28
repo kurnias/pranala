@@ -2,10 +2,13 @@
 <html lang="en">
 <html prefix="og: http://ogp.me/ns#">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <meta charset="utf-8">
-        
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if page.description %}
+        <meta name="description" content="{{ page.description }}"> 
+            {% else %}
         <meta name="description" content="{{ site.description }}">
+        {% endif %}
         <meta name="keywords" content="{{ site.keywords }}">
         <meta name="robots" content="all">
         <link rel="shortcut icon" href='favicon.ico'>
@@ -15,7 +18,7 @@
         <title>{{ site.name }} &middot; {{page.title}}</title>
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@prnla">
-        <meta name="twitter:creator" content="@yd0piw">
+        <meta name="twitter:creator" content="@tjeriwis">
         <meta name="twitter:title" content="{{ page.title }}">
         <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 20 }}">
         <meta name="twitter:image" content="{{ site.url }}/images/{{ page.og.image }}">
@@ -34,7 +37,6 @@
         <meta property="og:image"  content="{{ site.url }}/images/{{ site.og.image }}" />
         <meta property="og:description"  content="{{ site.description }}" />        
     {% endif %}
-
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
