@@ -1,8 +1,8 @@
 # config.yml for pranala
 name: Pranala
-subtitle: "My personal ramblings and half-truth"
-description: "Official home site Sindhu Kurnia, IoT tinkerer wannabe, casual coder and math lover."
-keywords: tutorial, openwrt,linux, ham radio, jekyll, github
+subtitle: "the ultimate boring website"
+description: "Yet another boring tutorial website, kopasan sana-sini, outright lies and half-truths, diskursus non-logis seorang Sindhu Kurnia"
+# keywords: deprecated, keywords automatically populate with post categories
 og:
    image: github.png
 author: 
