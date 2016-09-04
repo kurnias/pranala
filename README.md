@@ -9,8 +9,11 @@ Quick install
 ```
   % git clone https://github.com/kurnias/pranala.git
   % cd pranala
+  % cp _config.yml.default _config.yml
   % rake all
 ```
+
+don't forget to edit _config.yml
 
 Features
 =============
