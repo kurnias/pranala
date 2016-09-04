@@ -12,7 +12,7 @@
         <meta name="keywords" content="{% for category in site.categories %}{{ category.first | rstrip }},{% endfor %}">
         <meta name="robots" content="all">
         <link rel="shortcut icon" href='favicon.ico'>
-<!-- Twitter Card -->
+<!-- OpenGraph Tags -->
     {% if page.layout == 'post' %}
         <title>{{ site.name }} &middot; {{page.title}}</title>
         <meta name="twitter:card" content="summary_large_image">

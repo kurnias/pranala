@@ -1,14 +1,13 @@
-# config.yml for pranala
-name: Pranala
-subtitle: "the ultimate boring blog"
-description: "Blog yang teramat garing dan membosankan, tutorial dan tips kopasan dari sana-sini, diskursus dan pemikiran absurd dan ngaco saya"
-# keywords: deprecated, keywords automatically populate with post categories
+# Default _config.yml please edit
+name: Jekyll Blog
+subtitle: "Just a plain Jekyll blog"
+description: "Super simple jekyll blog yor learning purpose"
 og:
-   image: github.png
+   image: ogdefault.png
 author: 
-   name: Sindhu Kurnia
-   fbid: https://www.facebook.com/sindhuki
-url: https://prana.la
+   name: John Doe
+   fbid: https://www.facebook.com/johndoe
+url: https://example.com
 timezone: Asia/Jakarta
 markdown: kramdown
 highlighter: pygments
@@ -33,13 +32,13 @@ paginate: 10
 category_dir: categories
 
 # Disqus setting
-disqus_shortname : prnla
+disqus_shortname : yourdisqusid
 
 # Google analytics setting
-google_analytics : UA-37808923-4
+google_analytics : UA-xxxxxxx-x
 
 #Facebook Apps ID
-fb_appsid : 326012977514517
+fb_appsid : 32343xxxxxxxx
 
 #Social Media Sharing Option
 facebook_like: true
@@ -49,6 +48,6 @@ google_plus_one: true
 #bitly short URL
 bitly:
   username: prnla
-  api_key: R_ae920ec1a2df97a41733f1ffd7c21c40
+  api_key: bitly_apu_key
   
   
