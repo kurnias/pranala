@@ -7,7 +7,7 @@
         {% if page.description %}
         <meta name="description" content="{{ page.description }}"> 
             {% else %}
-        <meta name="description" content="{{ site.description }}">
+        <meta name="description" content="{{ site.description }} ">
         {% endif %}
         <meta name="keywords" content="{% for category in site.categories %}{{ category.first | rstrip }},{% endfor %}">
         <meta name="robots" content="all">
@@ -40,92 +40,11 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$', '$'] ],
-        displayMath: [ ['$$', '$$'], ["\[", "\]"] ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-      //,
-      //displayAlign: "left",
-      //displayIndent: "2em"
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+{% include fbsdk.html %}
 
-    <script type="text/javascript">
+{% include mathjax.html %}
 
-    /***************************************
-    Example of async loading social buttons + ajax bonus
-    Thomas Brattli
-    http://www.blackfishweb.com/
-    http://www.blackfishweb.com/blog/asynchronously-twitter-google-facebook-and-linkedin-buttons
-    ****************************************/
-
-    $(window).load(function () {
-        loadSocial();
-
-        //extra - hook up button event - remove this
-        $("#loadbutton").click(function () {
-            simulateAjaxRequest();
-        });
-    });
-
-function loadSocial() {
-    //I will assume that if we have one type of button we have them all
-    //If not we'll just exit
-    if ($(".twitter-share-button").length == 0) return;
-
-    //Twitter
-    if (typeof (twttr) != 'undefined') {
-        twttr.widgets.load();
-    } else {
-        $.getScript('https://platform.twitter.com/widgets.js');
-    }
-
-    //Facebook
-    if (typeof (FB) != 'undefined') {
-        FB.init({ status: true, cookie: true, xfbml: true });
-    } else {
-        $.getScript("https://connect.facebook.net/en_US/all.js#xfbml=1", function () {
-            FB.init({ status: true, cookie: true, xfbml: true });
-        });
-    }
-  
-    //Linked-in
-    if (typeof (IN) != 'undefined') {
-        IN.parse();
-    } else {
-        $.getScript("https://platform.linkedin.com/in.js");
-    }
-
-    //Google - Note that the google button will not show if you are opening the page from disk - it needs to be http(s)
-    if (typeof (gapi) != 'undefined') {
-        $(".g-plusone").each(function () {
-            gapi.plusone.render($(this).get(0));
-        });
-    } else {
-        $.getScript('https://apis.google.com/js/plusone.js');
-    }
-}
-
-    function simulateAjaxRequest() {
-        //Here we would load content from somewhere and insert that into the page.
-        //In this case I will just add another couple of buttons to the loadbutton html
-        var html = '<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://prana.la" data-text="Pranala" data-count="horizontal" data-via="Pranala"></a>';
-        html+= '<div class="fb-like" data-href="https://prana.la" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>';
-        html+= '<div class="g-plusone" data-size="medium" data-annotation="inline" data-width="90" data-href="https://prana.la"></div>';
-        html+= '<scr'+'ipt type="IN/Share" data-url="https://prana.la" data-counter="right"></scr'+'ipt>';
-        $("#loadbutton").html(html);
-
-        //Then we call loadSocial to reinit the scripts
-        loadSocial();
-    }
-
-    </script>
+{% include asyncbtn.html %}
 
 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">

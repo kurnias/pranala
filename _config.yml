@@ -1,7 +1,7 @@
 # config.yml for pranala
 name: Pranala
-subtitle: "the ultimate boring website"
-description: "Yet another boring tutorial website, kopasan sana-sini, outright lies and half-truths, diskursus non-logis seorang Sindhu Kurnia"
+subtitle: "the ultimate boring blog"
+description: "Blog yang teramat garing dan membosankan, tutorial dan tips kopasan dari sana-sini, diskursus dan pemikiran absurd dan ngaco saya"
 # keywords: deprecated, keywords automatically populate with post categories
 og:
    image: github.png
