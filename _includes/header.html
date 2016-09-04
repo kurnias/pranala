@@ -13,7 +13,6 @@
         <meta name="robots" content="all">
         <link rel="shortcut icon" href='favicon.ico'>
 <!-- Twitter Card -->
-      
     {% if page.layout == 'post' %}
         <title>{{ site.name }} &middot; {{page.title}}</title>
         <meta name="twitter:card" content="summary_large_image">
@@ -25,17 +24,19 @@
       
         <meta property="fb:app_id" content="326012977514517" /> 
         <meta property="og:type"   content="article" />
+        <meta property="og:title"  content="{{ page.title }}" />
         <meta property="article:author"   content="{{ site.author.fbid }}" />      
         <meta property="og:url"    content="{{ site.url }}{{ page.url }}" /> 
-        <meta property="og:title"  content="{{ page.title }}" />
         <meta property="og:description"  content="{{ page.content | strip_html | truncatewords: 15 }}" />      
         <meta property="og:image"  content="{{ site.url }}/images/{{ page.og.image }}" /> 
 	{% else %}
         <title>{{ site.name }} &middot; {{site.subtitle}}</title>
-        <meta property="og:type"  content="website" />
+        <meta property="fb:app_id" content="326012977514517" />    
+        <meta property="og:title"  content="{{ site.name }} {{site.subtitle}}" />     
+        <meta property="og:type"   content="website" />
         <meta property="og:url"    content="{{ site.url }}" />       
         <meta property="og:image"  content="{{ site.url }}/images/{{ site.og.image }}" />
-        <meta property="og:description"  content="{{ site.description }}" />        
+        <meta property="og:description"  content="{{ site.description }}" />
     {% endif %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
