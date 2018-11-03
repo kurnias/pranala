@@ -17,7 +17,7 @@ post:
     template: _post.tpl
     editor: nano
 
-gems: [jekyll-paginate, jekyll-gist]
+plugins: [jekyll-paginate, jekyll-gist]
 
 # Don't parse this to _site
 exclude: ['Rakefile', 'Gemfile.lock', 'Gemfile', README.md, LICENSE]
