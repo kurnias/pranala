@@ -21,7 +21,7 @@ Dont forget edit <code>_config.yml</code> setting,
 
 ```
   % rake write["firstpost"]
-  % rake all
+  % rake build
 ```
 
 Features
