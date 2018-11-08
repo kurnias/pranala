@@ -1,7 +1,7 @@
 Pranala
 ===========
 
-Jekyll static site theme based on Twitter Bootstrap 3 forked from [Octostrap3](http://kaworu.github.io/octostrap3). You can see how it looks like at http://prana.la.
+Jekyll static site theme based on Twitter Bootstrap 3 forked from [Octostrap3](http://kaworu.github.io/octostrap3). You can see how it looks like at https://rt-rw.net.
 
 Quick install
 =============
