@@ -27,5 +27,5 @@ Dont forget edit <code>_config.yml</code> setting,
 Features
 =============
 - [x] Nothing special but standard Jekyll based static blog features.
-- [x] Support Jekyll 3.0
+- [x] Support Jekyll 3.8.5
 - [x] Support Latex Math
