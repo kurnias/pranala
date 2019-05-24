@@ -4,3 +4,4 @@ gem 'jekyll-paginate', '~> 1.1'
 gem 'jekyll', '>= 3.0.1'
 gem 'bitly', '>= 0.10.4'
 gem "yajl-ruby", ">= 1.3.1"
+gem "rack", ">=2.0.6"
